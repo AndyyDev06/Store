@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Farm Produce Delivery</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Farm Produce Delivery</h1>
+      <nav>
+        <ul>
+          <li><a href="#" id="home-link">Home</a></li>
+          <li><a href="#" id="products-link">Products</a></li>
+          <li><a href="#" id="cart-button">Cart</a></li>
+          <li><a href="#" id="profile-link">Profile</a></li>
+          <li><a href="#" id="login-link">Login</a></li>
+          <li><a href="#" id="register-link">Register</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="product-list" class="active">
+        <h2>Available Produce</h2>
+        <div class="products"></div>
+      </section>
+
+      <section id="profile-page" class="hidden">
+        <h2>Your Profile</h2>
+        <p id="profile-info"></p>
+        <button id="logout-button">Logout</button>
+      </section>
+    </main>
+
+    <main>
+      <section id="product-list" class="active">
+        <h2>Available Produce</h2>
+        <div class="products"></div>
+      </section>
+
+      <section id="profile-page" class="hidden">
+        <h2>Your Profile</h2>
+        <p id="profile-info"></p>
+        <form id="edit-profile" class="hidden">
+          <label for="edit-username">Username:</label>
+          <input type="text" id="edit-username" />
+          <button type="submit">Save</button>
+        </form>
+        <button id="edit-profile-button">Edit Profile</button>
+        <button id="logout-button">Logout</button>
+      </section>
+
+      <div id="shopping-cart-modal" class="modal">
+        <div class="modal-content">
+          <span class="close" id="close-cart-modal">&times;</span>
+          <h2>Your Shopping Cart</h2>
+          <div class="cart-items">
+            <!-- Cart items will be dynamically added here -->
+          </div>
+          <div id="cart-total">Total: $0.00</div>
+          <button id="checkout-button">Checkout</button>
+        </div>
+      </div>
+    </main>
+
+    <!-- Example checkout form -->
+    <form id="checkout-form">
+      <label for="card-number">Card Number</label>
+      <input type="text" id="card-number" placeholder="1234 5678 9012 3456" />
+
+      <label for="expiry-date">Expiry Date</label>
+      <input type="text" id="expiry-date" placeholder="MM/YY" />
+
+      <label for="cvv">CVV</label>
+      <input type="text" id="cvv" placeholder="123" />
+
+      <button type="submit">Pay Now</button>
+    </form>
+
+    <footer>
+      <p>&copy; 2024 Farm Produce Delivery</p>
+    </footer>
+
+    <!-- Registration Modal -->
+    <div id="registration-modal" class="modal hidden">
+      <div class="modal-content">
+        <span class="close-button" id="close-registration-modal">&times;</span>
+        <h2>Register</h2>
+        <form id="register">
+          <label for="register-username">Username:</label>
+          <input type="text" id="register-username" required />
+
+          <label for="register-email">Email:</label>
+          <input type="email" id="register-email" required />
+
+          <label for="register-password">Password:</label>
+          <input type="password" id="register-password" required />
+
+          <button type="submit">Register</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Login Modal -->
+    <div id="login-modal" class="modal hidden">
+      <div class="modal-content">
+        <span class="close-button" id="close-login-modal">&times;</span>
+        <h2>Login</h2>
+        <form id="login">
+          <label for="login-email">Email:</label>
+          <input type="email" id="login-email" required />
+
+          <label for="login-password">Password:</label>
+          <input type="password" id="login-password" required />
+
+          <button type="submit">Login</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+    <script src="https://js.stripe.com/v3/"></script>
+  </body>
+</html>

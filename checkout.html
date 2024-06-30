@@ -1,0 +1,34 @@
+<!-- checkout.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout</title>
+    <!-- Include any necessary CSS -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>Checkout</h1>
+
+    <!-- Display cart items and total -->
+    <div id="checkout-cart"></div>
+
+    <!-- Payment form -->
+    <form id="payment-form">
+      <label for="card-number">Card Number</label>
+      <input type="text" id="card-number" placeholder="1234 5678 9012 3456" />
+
+      <label for="expiry-date">Expiry Date</label>
+      <input type="text" id="expiry-date" placeholder="MM/YY" />
+
+      <label for="cvv">CVV</label>
+      <input type="text" id="cvv" placeholder="123" />
+
+      <button type="submit">Pay Now</button>
+    </form>
+
+    <!-- Include any necessary JavaScript -->
+    <script src="app.js"></script>
+  </body>
+</html>
